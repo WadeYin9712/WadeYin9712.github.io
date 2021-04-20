@@ -79,8 +79,8 @@ td {          /* for table */
     width: 180px;
     border-radius: 50%;
     background-image: url(../../images/da_pic.jpg);
-    background-position: -80px;
-    background-size: 160px;
+    background-position: -1px;
+    background-size: 180px;
     background-repeat: no-repeat;
     border: 3px white solid;
     margin-left: 150px;
