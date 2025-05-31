@@ -1,454 +1,463 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
-  <meta name="description" content="PhD student at University of California, Los Angeles (UCLA)">
-  <title>Da Yin - UCLA</title>
-  <link rel="shortcut icon" href="images/tree-12c-194370/tree-12c-152-194370.png" />
-  <link href='assets/css_s/bootstrap.min.css' rel='stylesheet'>
-  <link href='assets/css_s/main_style.css' rel='stylesheet'>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Da Yin</title>
+  <!-- Font & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <link href='https://fonts.googleapis.com/css?family=Nunito:200,300,400,500,600,700,800,900,100italic,100,300italic,400italic,500italic,900italic,700italic' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Lato:200,300,400,500,600,700,800,900,100italic,100,300italic,400italic,500italic,900italic,700italic' rel='stylesheet' type='text/css'>
+  <style>
+    /* ----------  Base  ---------- */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #111;
+      background: #fff;
+    }
+    a { color: #0066cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-  <!-- Global Site Tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-100825544-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    /* ----------  Top nav  ---------- */
+    .navbar {
+      display: flex;
+      justify-content: flex-end; /* ← previous style */
+      gap: 2rem;
+      padding: 1rem 1.5rem;
+      font-weight: 500;
+    }
+    .navbar a { color: #333; text-transform: lowercase; }
 
-    gtag('config', 'UA-100825544-1');
-  </script>
-  <style type="text/css">
-      .paper_rest{
-        line-height: 1.5em
-      }
-      .row{
-        line-height: 1.5em
-      }
-      .paper_title{
-        font-size: 18px
-      }
-      .header-text-name{
-        font-family:STFangsong
-      }
+    /* ----------  Header  ---------- */
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      max-width: 900px;
+      padding: 2rem 1.5rem;
+      margin: 0 auto;
+    }
+    .avatar {
+      flex-shrink: 0;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: #eee url("images/avatar.jpg") center / cover no-repeat;
+    }
+    .profile h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .profile p { max-width: 750px; margin-bottom: 1rem; }
+    .icons { list-style: none; display: flex; gap: 1rem; }
+    .icons a { font-size: 1.35rem; color: #444; }
+    .icons a:hover { color: #000; }
+
+    /* ----------  Interests  ---------- */
+    section { max-width: 900px; margin: 0 auto 2rem; padding: 0 1.5rem; }
+    section h2 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .interests { list-style: none; margin-left: 1rem; }
+    .interests li { margin: 0.35rem 0; }
+    .interests li::before { content: "↳"; margin-right: 0.55rem; color: #888; }
+
+    /* ----------  Paper cards  ---------- */
+    .paper {
+      display: flex;
+      gap: 1.25rem;
+      margin-bottom: 1.35rem;
+    }
+    .paper .venue {
+      flex-shrink: 0;
+      width: 8rem;
+      font-weight: 600;
+      color: #555;
+    }
+    .paper .info h3 {
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+    .paper .info p { font-size: 0.9rem; color: #666; margin-bottom: 0.25rem; }
+    .links a { font-size: 0.9rem; margin-right: 1rem; }
   </style>
 </head>
 <body>
-  <div id='header' class ='bg' style="font-family: Gill Sans">
-    <div id='header-inner'>
-      <div id="author-avatar"></div>
-      <div class='header-text'>
-        <div class='header-text-name'>
-            Da Yin <span style="font-family:STFangsong; font-size:24pt"> </span>
+  <!-- ========== NAV =========== -->
+  <nav class="navbar">
+    <a href="#home">home</a>
+    <a href="#publications">publications</a>
+    <a href="#education">education</a>
+  </nav>
+
+  <!-- ========== HEADER =========== -->
+  <header id="home" class="profile">
+    <div class="avatar"></div>
+    <div>
+      <h1>Da Yin</h1>
+      <p>
+        I am a postdoc researcher at Meta FAIR. I obtained Ph.D. in Computer Science at
+        <a href="https://ucla.edu/">UCLA</a>, advised by
+        <a href="http://web.cs.ucla.edu/~kwchang/">Kai‑Wei Chang</a>, and was awarded
+        the Amazon PhD Fellowship in 2023. My research focuses on <b>empowering
+        more adaptive reasoning and planning ability of LLM agents and enhancing
+        cross‑region and cross‑task generalizability</b>.
+      </p>
+      <ul class="icons">
+        <li>
+          <a class="fa-solid fa-file-pdf" href="files/da_yin_cv.pdf"></a>
+        </li>
+        <li>
+          <a class="fa-brands fa-github" href="https://github.com/WadeYin9712"></a>
+        </li>
+        <li>
+          <a class="fa-brands fa-x-twitter" href="https://twitter.com/Wade_Yin9712"></a>
+        </li>
+        <li>
+          <a
+            class="fa-solid fa-graduation-cap"
+            href="https://scholar.google.com/citations?user=LaKNyhQAAAAJ"
+          ></a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ========== INTERESTS =========== -->
+  <section>
+    <h2>✨ Currently I am interested in:</h2>
+    <ul class="interests">
+      <li>LLM Reasoning & Planning</li>
+      <li>Learning from Human-LLM Collaboration</li>
+      <li>Cross‑region / Cross‑task Generalization</li>
+    </ul>
+  </section>
+
+  <!-- ========== EDUCATION anchor ========= -->
+  <section id="education">
+    <h2>🎓 Education</h2>
+    <ul class="interests">
+      <li>Postdoc, Meta FAIR, 2025-</li>
+      <li>Ph.D., University of Califorlia, Los Angeles (UCLA), 2020-2025</li>
+      <li>B.A., Peking University (PKU), 2016-2020</li>
+    </ul>
+  </section>
+
+  <!-- ========== FULL PUBLICATIONS =========== -->
+  <section id="publications">
+    <h2>📝 Full publication list:</h2>
+
+    <div class="paper">
+      <div class="venue">ICML 2025</div>
+      <div class="info">
+        <h3>
+          QLASS: Boosting Language Agent Inference via Q-Guided Stepwise Search
+        </h3>
+        <p>
+          Zongyu Lin*, Yao Tang*, Xingcheng Yao*, <b>Da Yin*</b>, Ziniu Hu, Yizhou Sun, Kai-Wei Chang
+        </p>
+        <h5>
+          (* denotes equal contribution)
+        </h5>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2502.02584">📄 Paper</a><a href="https://github.com/Rafa-zy/QLASS">💻 GitHub</a><a href="#">
+            🌐 Website</a
+          >
         </div>
-        <div class='header-text-email'>
-          <p>PhD Student</p>
-          <p>Computer Science Department, University of California, Los Angeles (UCLA)</p>
-          <p>da.yin_@_cs.ucla.edu</p>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="venue">NAACL 2025</div>
+      <div class="info">
+        <h3>
+          Guiding Through Complexity: What Makes Good Supervision for Hard Reasoning Tasks?
+        </h3>
+        <p>Xuan He*, <b>Da Yin*</b>, Nanyun Peng</p>
+        <h5>
+          (* denotes equal contribution)
+        </h5>
+        <h4>
+          <font color="#FF0000">Oral Presentation</font>
+        </h4>
+        <div class="links"><a href="https://arxiv.org/abs/2410.20533">📄 Paper</a><a href="https://github.com/hexuan21/Weak-to-Strong">💻 GitHub</a>
         </div>
+      </div>
+    </div>
 
-        <div class='header-text-items'>
-          <ul class="icons">
-            <li><a href="files/da_yin_cv.pdf" class="icon fa-file-pdf-o"><span class="label"></span></a></li>
-            <li><a href="https://github.com/WadeYin9712" class="icon fa-github"><span class="label"></span></a></li>
-            <li><a href="https://twitter.com/Wade_Yin9712" class="icon fa-twitter"><span class="label"></span></a></li>
-            <li><a href="https://scholar.google.com/citations?user=n32w34kAAAAJ&hl=en" class="icon ai-google-scholar"><span class="label"></span></a></li>
-          </ul>
+    <div class="paper">
+      <div class="venue">CVPR 2025</div>
+      <div class="info">
+        <h3>
+          VISCO: Benchmarking Fine-Grained Critique and Correction Towards Self-Improvement in Visual Reasoning
+        </h3>
+        <p>Xueqing Wu, Yuheng Ding, Bingxuan Li, Pan Lu, <b>Da Yin</b>, Kai-Wei Chang, Nanyun Peng</p>
+        <div class="links"><a href="https://arxiv.org/abs/2412.02172">📄 Paper</a><a href="https://github.com/PlusLabNLP/VISCO">💻 GitHub</a><a href="https://visco-benchmark.github.io/">
+            🌐 Website</a
+          >
         </div>
       </div>
     </div>
-  </div>
 
-  <div class='container' style="font-size:18px; font-family: Gill Sans;">
-    <div class='col-xs-1'>
-    </div>
-    <div class='col-xs-10'>
-      <div class='row'>
-        <p>
-          I am a <b>final-year PhD student</b> in Computer Science at <a href="https://ucla.edu/">UCLA</a> advised by Prof. <a href="http://web.cs.ucla.edu/~kwchang/">Kai-Wei Chang</a>, working in <a href="http://web.cs.ucla.edu/~kwchang/members/">UCLANLP</a> lab. I was awarded <a href="https://www.sciencehub.ucla.edu/2022-amazon-fellows/">Amazon PhD Fellowship</a> in 2023. I previously interned at <a href="">Microsoft Research</a>, <a href="https://mosaic.allenai.org/">AI2 Mosaic</a>, and <a href="https://alexa.amazon.com/">Amazon Alexa AI</a>.<br/> 
-        </p>
-        <p>
-          My research interest is building generalizable and inclusive language processing models that can be applied across applications and environments. I particularly focus on <b>empowering stronger reasoning and planning ability of LLM agents/reasoners</b>, and <b>enhancing cross-region and cross-task generalizability</b>.
-        </p>
-        <p>
-          I completed my bachelor's at <a href="https://www.pku.edu.cn/">Peking University</a>, where I worked with Prof. <a href="https://wanxiaojun.github.io/">Xiaojun Wan</a> and Prof. <a href="https://scholar.google.com.au/citations?user=LaKNyhQAAAAJ&hl=en">Baobao Chang</a>.
-        </p>
-        <p>
-          <font color="#FF0000"><b>I'm actively looking for postdoc and industry research scientist position in 2025. Feel free to reach out if you're interested!</b></font>.
-        </p>
-        <!-- <p>
-        You can find my <a href="files/CV.pdf">CV</a> here.
-        </p> -->
-        <!-- <b>NEWS</b>:
-          <ul>
-            <li>
-            </li>
-          </ul> -->
+    <div class="paper">
+      <div class="venue">ICLR 2025</div>
+      <div class="info">
+        <h3>Bridging the Data Provenance Gap Across Text, Speech and Video</h3>
+        <p>Shayne Longpre, Nikhil Singh, Manuel Cherep, Kushagra Tiwary, Joanna Materzynska, William Brannon, Robert Mahari, Manan Dey, Mohammed Hamdy, Nayan Saxena, Ahmad Mustafa Anis, Emad A Alghamdi, Vu Minh Chien, Naana Obeng-Marnu, <b>Da Yin</b>, Kun Qian, Yizhi Li, Minnie Liang, An Dinh, Shrestha Mohanty, Deividas Mataciunas, Tobin South, Jianguo Zhang, Ariel N Lee, Campbell S Lund, Christopher Klamm, Damien Sileo, Diganta Misra, Enrico Shippole, Kevin Klyman, Lester JV Miranda, Niklas Muennighoff, Seonghyeon Ye, Seungone Kim, Vipul Gupta, Vivek Sharma, Xuhui Zhou, Caiming Xiong, Luis Villa, Stella Biderman, Alex Pentland, Sara Hooker, Jad Kabbara</p>
+        <div class="links"><a href="https://arxiv.org/abs/2412.17847">📄 Paper</a></div>
       </div>
-
-      <div class='row' style="font-size:16px">
-        <h2>Publications</h2>
-        <br>
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
-          <tr>
-            <td valign="top">
-              <div class='paper_title'>
-                <a href="">LLMs as General-Purpose Simulators For Agent Training</a>
-              </div>
-              <div class='paper_rest'>
-                <i>In Progress</i> <img src="https://img.shields.io/badge/_-LLM_Reasoning_Planning-blue"><br/>
-              </div>
-              <div class="paper_bottom_space"></div>
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">
-              <div class='paper_title'>
-                <a href="">Guiding Through Complexity: What Makes Good Supervision for Hard Reasoning Tasks?</a>
-              </div>
-              <div class='paper_rest'>
-                Xuan He*, <b>Da Yin*</b>, Nanyun Peng<br/>
-                <i>(Equal Contribution)</i><br/>
-                <i>In Submission</i> <img src="https://img.shields.io/badge/_-LLM_Reasoning_Planning-blue"><br/>
-              </div>
-              <div class="paper_bottom_space"></div>
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">
-              <div class='paper_title'>
-                <a href="">Q* Agent: Optimizing Language Agents with Q-Guided Exploration</a>
-              </div>
-              <div class='paper_rest'>
-                Zongyu Lin*, Yao Tang*, <b>Da Yin*</b>, Stuart X. Yao, Ziniu Hu, Yizhou Sun, Kai-Wei Chang<br/>
-                <i>In Submission</i> <img src="https://img.shields.io/badge/_-LLM_Reasoning_Planning-blue"><br/>
-              </div>
-              <div class="paper_bottom_space"></div>
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">
-              <div class='paper_title'>
-                <a href="">SafeWorld: Geo-Diverse Safety Alignment</a>
-              </div>
-              <div class='paper_rest'>
-                <b>Da Yin*</b>, Haoyi Qiu*, Kung-Hsiang Huang, Kai-Wei Chang, Nanyun Peng<br/>
-                <i>(Equal Contribution)</i><br/>
-                <b>NeurIPS 2024</b> <img src="https://img.shields.io/badge/_-LLM_Alignment-red"> <img src="https://img.shields.io/badge/_-Cross--Region_Generalization-orange"><br/>
-                [ <a href="">paper</a> | <a href="">code</a> ]
-              </div>
-              <div class="paper_bottom_space"></div>
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">
-              <div class='paper_title'>
-                <a href="https://arxiv.org/abs/2407.19056">OfficeBench: Benchmarking Language Agents across Multiple Applications for Office Automation</a>
-              </div>
-              <div class='paper_rest'>
-                Zilong Wang, Yuedong Cui, Li Zhong, Zimin Zhang, <b>Da Yin</b>, Bill Yuchen Lin, Jingbo Shang<br/>
-                <i>Arxiv Preprint</i> <img src="https://img.shields.io/badge/_-LLM_Reasoning_Planning-blue"><br/>
-                [ <a href="https://arxiv.org/abs/2407.19056">paper</a> | <a href="https://github.com/zlwang-cs/OfficeBench">code</a> ]
-              </div>
-              <div class="paper_bottom_space"></div>
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">
-              <div class='paper_title'>
-                <a href="https://export.arxiv.org/abs/2407.14933">Consent in Crisis: The Rapid Decline of the AI Data Commons</a>
-              </div>
-              <div class='paper_rest'>
-                Shayne Longpre, Robert Mahari, Ariel Lee, Campbell Lund, Hamidah Oderinwale, William Brannon, Nayan Saxena, Naana Obeng-Marnu, Tobin South, Cole Hunter, Kevin Klyman, Christopher Klamm, Hailey Schoelkopf, Nikhil Singh, Manuel Cherep, Ahmad Anis, An Dinh, Caroline Chitongo, <b>Da Yin</b>, Damien Sileo, Deividas Mataciunas, Diganta Misra, Emad Alghamdi, Enrico Shippole, Jianguo Zhang, Joanna Materzynska, Kun Qian, Kush Tiwary, Lester Miranda, Manan Dey, Minnie Liang, Mohammed Hamdy, Niklas Muennighoff, Seonghyeon Ye, Seungone Kim, Shrestha Mohanty, Vipul Gupta, Vivek Sharma, Vu Minh Chien, Xuhui Zhou, Yizhi Li, Caiming Xiong, Luis Villa, Stella Biderman, Hanlin Li, Daphne Ippolito, Sara Hooker, Jad Kabbara, Sandy Pentland<br/>
-                <b>NeurIPS 2024 Dataset and Benchmark Track</b> <img src="https://img.shields.io/badge/_-LLM_Alignment-red"><br/>
-                <b><font color="#FF0000">Featured by <a href="https://www.nytimes.com/2024/07/19/technology/ai-data-restrictions.html">New York Times</a></font></b><br/>
-                [ <a href="https://arxiv.org/abs/2407.14933">paper</a> | <a href="https://github.com/Data-Provenance-Initiative/Data-Provenance-Collection">code</a> | <a href="https://www.dataprovenance.org/">Project Page</a> ]
-              </div>
-              <div class="paper_bottom_space"></div>
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">
-              <div class='paper_title'>
-                <a href="https://arxiv.org/abs/2311.05657">🪄 Agent Lumos: Unified and Modular Training for Open-Source Language Agents</a>
-              </div>
-              <div class='paper_rest'>
-                <b>Da Yin</b>, Faeze Brahman, Abhilasha Ravichander, Khyathi Chandu, Kai-Wei Chang, Yejin Choi, Bill Yuchen Lin<br/>
-                <b>ACL 2024</b> <img src="https://img.shields.io/badge/_-LLM_Reasoning_Planning-blue"><br/>
-                <b><font color="#FF0000">Featured by <a href="https://www.marktechpost.com/2024/04/01/lumos-an-open-source-generalizable-language-agent-training-framework">Marktechpost</a></font></b><br/>
-                [ <a href="https://arxiv.org/abs/2311.05657">paper</a> | <a href="https://github.com/allenai/lumos">code</a> <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/allenai/lumos?style=social"> | <a href="https://allenai.github.io/lumos/">Project Page</a> | <a href="https://huggingface.co/ai2lumos">Data & Models</a> | <a href="https://twitter.com/Wade_Yin9712/status/1724151646291169419">Twitter</a> ]
-              </div>
-              <div class="paper_bottom_space"></div>
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">
-              <div class='paper_title'>
-                <a href="https://arxiv.org/abs/2403.02502">Trial and Error: Exploration-Based Trajectory Optimization for LLM Agents</a>
-              </div>
-              <div class='paper_rest'>
-                Yifan Song, <b>Da Yin</b>, Xiang Yue, Jie Huang, Sujian Li, Bill Yuchen Lin<br/>
-                <b>ACL 2024</b> <img src="https://img.shields.io/badge/_-LLM_Reasoning_Planning-blue"><br/>
-                [ <a href="https://arxiv.org/abs/2403.02502">paper</a> | <a href="https://github.com/Yifan-Song793/ETO">code</a> | <a href="https://twitter.com/99Solaris/status/1765745995328200932">Twitter</a> ]
-              </div>
-              <div class="paper_bottom_space"></div>
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">
-              <div class='paper_title'>
-                <a href="https://arxiv.org/abs/2303.15422">KPEval: Towards Fine-Grained Semantic-Based Keyphrase Evaluation</a>
-              </div>
-              <div class='paper_rest'>
-                Di Wu, <b>Da Yin</b>, Kai-Wei Chang<br/>
-                <b>ACL 2024 Findings</b><br/>
-                [ <a href="https://arxiv.org/abs/2303.15422">paper</a> | <a href="https://github.com/uclanlp/KPEval">code</a> ]
-              </div>
-              <div class="paper_bottom_space"></div>
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">
-              <div class='paper_title'>
-                <a href="https://arxiv.org/abs/2305.14327">Dynosaur: A Dynamic Growth Paradigm for Instruction-Tuning Data Curation</a>
-              </div>
-              <div class='paper_rest'>
-                <b>Da Yin*</b>, Xiao Liu*, Fan Yin*, Ming Zhong*, Hritik Bansal, Jiawei Han, Kai-Wei Chang<br/>
-                <i>(Equal Contribution)</i><br/>
-                <b>EMNLP 2023</b> <img src="https://img.shields.io/badge/_-LLM_Alignment-red"><br/>
-                [ <a href="https://arxiv.org/abs/2305.14327">paper</a> | <a href="https://github.com/WadeYin9712/Dynosaur">code</a> <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/WadeYin9712/Dynosaur?style=social"> | <a href="https://dynosaur-it.github.io/">Project Page</a> | <a href="https://twitter.com/Wade_Yin9712/status/1661237791920132098">Twitter</a> ]
-              </div>
-              <div class="paper_bottom_space"></div>
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">
-              <div class='paper_title'>
-                <a href="">LEAF: Linguistically Enhanced Event Temporal Relation Framework</a>
-              </div>
-              <div class='paper_rest'>
-                Stanley Lim, <b>Da Yin</b>, Nanyun Peng<br/>
-                <b>Pan-DL workshop @ EMNLP 2023 (Pattern-based Approaches to NLP in the Age of Deep Learning)</b><br/>
-                <b><font color="#FF0000">🏆 Best Paper Award</font></b><br/>
-                [ <a href="https://aclanthology.org/2023.pandl-1.2/">paper</a> ]
-              </div>
-              <div class="paper_bottom_space"></div>
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">
-              <div class='paper_title'>
-                <a href="">The Magic of IF: Investigating Causal Reasoning Abilities in Large Language Models of Code</a>
-              </div>
-              <div class='paper_rest'>
-                Xiao Liu, <b>Da Yin</b>, Chen Zhang, Yansong Feng, Dongyan Zhao<br/>
-                <b>ACL 2023 Findings</b> <img src="https://img.shields.io/badge/_-LLM_Reasoning_Planning-blue"><br/>
-                [ <a href="https://arxiv.org/abs/2305.19213">paper</a> | <a href="https://github.com/xxxiaol/magic-if">code</a> ]
-              </div>
-              <div class="paper_bottom_space"></div>
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">
-              <div class='paper_title'>
-                <a href="https://arxiv.org/abs/2301.01893">GIVL: Improving Geographical Inclusivity of Vision-Language Models with Pre-Training Methods</a>
-              </div>
-              <div class='paper_rest'>
-                <b>Da Yin</b>, Feng Gao, Govind Thattai, Michael Johnston, Kai-Wei Chang<br/>
-                <b>CVPR 2023</b> <img src="https://img.shields.io/badge/_-Cross--Region_Generalization-orange"><br/>
-                [ <a href="https://arxiv.org/abs/2301.01893">paper</a> | code ]
-              </div>
-              <div class="paper_bottom_space"></div>
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">
-              <div class='paper_title'>
-                <a href="https://arxiv.org/abs/2205.12247">GeoMLAMA: Geo-Diverse Commonsense Probing on Multilingual Pre-Trained Language Models</a>
-              </div>
-              <div class='paper_rest'>
-                <b>Da Yin</b>, Hritik Bansal, Masoud Monajatipoor, Liunian Harold Li, Kai-Wei Chang<br/>
-                <b>EMNLP 2022 <font color="#FF0000">(Oral, 175/4100≈4.3%)</font> </b> <img src="https://img.shields.io/badge/_-Cross--Region_Generalization-orange"><br/>
-                [ <a href="https://arxiv.org/abs/2205.12247">paper</a> | <a href="https://github.com/WadeYin9712/GeoMLAMA/">code</a> ]
-              </div>
-              <div class="paper_bottom_space"></div>
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">
-              <div class='paper_title'>
-                <a href="">How well can Text-to-Image Generative Models understand Ethical Natural Language Interventions?</a>
-              </div>
-              <div class='paper_rest'>
-                Hritik Bansal*, <b>Da Yin*</b>, Masoud Monajatipoor, Kai-Wei Chang<br/>
-                <i>(Equal Contribution)</i><br/>
-                <b>EMNLP 2022 <font color="#FF0000">(Oral, 175/4100≈4.3%)</font> </b> <img src="https://img.shields.io/badge/_-Cross--Region_Generalization-orange"><br/>
-                [ <a href="">paper</a> | <a href="">code</a> ]
-              </div>
-              <div class="paper_bottom_space"></div>
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">
-              <div class='paper_title'>
-                <a href="">Towards a Unified Multi-Dimensional Evaluator for Text Generation</a>
-              </div>
-              <div class='paper_rest'>
-                Ming Zhong, Yang Liu, <b>Da Yin</b>, Yuning Mao, Yizhu Jiao, Pengfei Liu, Chenguang Zhu, Heng Ji, Jiawei Han<br/>
-                <b>EMNLP 2022 <font color="#FF0000">(Oral, 175/4100≈4.3%)</font> </b> <img src="https://img.shields.io/badge/_-LLM_Alignment-red"><br/>
-                [ <a href="https://arxiv.org/abs/2210.07197">paper</a> | <a href="https://github.com/maszhongming/UniEval">code</a> <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/maszhongming/UniEval?style=social">]
-              </div>
-              <div class="paper_bottom_space"></div>
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">
-              <div class='paper_title'>
-                <a href="https://arxiv.org/abs/2203.08075">Things not Written in Text: Exploring Spatial Commonsense from Visual Signals</a>
-              </div>
-              <div class='paper_rest'>
-                Xiao Liu, <b>Da Yin</b>, Yansong Feng, Dongyan Zhao<br/>
-                <b>ACL 2022</b><br/>
-                [ <a href="https://arxiv.org/abs/2203.08075">paper</a> | <a href="https://github.com/xxxiaol/spatial-commonsense">code</a> ]
-              </div>
-              <div class="paper_bottom_space"></div>
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">
-              <div class='paper_title'>
-                <a href="https://arxiv.org/abs/2202.08772">A Survey of Knowledge-Intensive NLP with Pre-Trained Language Models</a>
-              </div>
-              <div class='paper_rest'>
-                <b>Da Yin</b>, Li Dong, Hao Cheng, Xiaodong Liu, Kai-Wei Chang, Furu Wei, Jianfeng Gao<br/>
-                <i>Presented at Spa-NLP workshop @ ACL 2022 (Semiparametric Methods in NLP)</i><br/>
-                [ <a href="https://arxiv.org/abs/2202.08772">paper</a> ]
-              </div>
-              <div class="paper_bottom_space"></div>
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">
-              <div class='paper_title'>
-                <a href="https://aclanthology.org/2021.emnlp-main.162/">Broaden the Vision: Geo-Diverse Visual Commonsense Reasoning</a>
-              </div>
-              <div class='paper_rest'>
-                <b>Da Yin</b>, Liunian Harold Li, Ziniu Hu, Nanyun Peng, Kai-Wei Chang<br/>
-                <b>EMNLP 2021 <font color="#FF0000">(Oral, 315/3600≈8.8%)</font></b> <img src="https://img.shields.io/badge/_-Cross--Region_Generalization-orange"><br/>
-                [ <a href="https://aclanthology.org/2021.emnlp-main.162/">paper</a> | <a href="https://github.com/WadeYin9712/GD-VCR">code</a> | <a href="https://gd-vcr.github.io/">Project Page</a> | <a href="files/EMNLP 2021 GD-VCR Slides.pdf">Slides</a> ]
-              </div>
-              <div class="paper_bottom_space"></div>
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">
-              <div class='paper_title'>
-                <a href="https://arxiv.org/abs/2104.09420">Everything Has a Cause: Leveraging Causal Inference in Legal Text Analysis</a>
-              </div>
-              <div class='paper_rest'>
-                Xiao Liu*, <b>Da Yin*</b>, Yansong Feng, Yuting Wu, Dongyan Zhao<br/>
-                <i>(Equal Contribution)</i><br/>
-                <b>NAACL 2021 <font color="#FF0000">(Oral)</font></b> <img src="https://img.shields.io/badge/_-LLM_Reasoning_Planning-blue"><br/>
-                [ <a href="https://arxiv.org/abs/2104.09420">paper</a> | <a href="https://github.com/xxxiaol/GCI">code</a> ]
-              </div>
-              <div class="paper_bottom_space"></div>
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">
-              <div class='paper_title'>
-                <a href="https://arxiv.org/abs/2104.05938">QMSum: A New Benchmark for Query-based Multi-domain Meeting Summarization</a>
-              </div>
-              <div class='paper_rest'>
-                Ming Zhong*, <b>Da Yin*</b>, Tao Yu, Ahmad Zaidi, Mutethia Mutuma, Rahul Jha, Ahmed Hassan Awadallah, Asli Celikyilmaz, Yang Liu, Xipeng Qiu, Dragomir Radev<br/>
-                <i>(Equal Contribution)</i><br/>
-                <b>NAACL 2021 <font color="#FF0000">(Oral)</font></b><br/>
-                [ <a href="https://arxiv.org/abs/2104.05938">paper</a> | <a href="https://github.com/Yale-LILY/QMSum">code</a> <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/Yale-LILY/QMSum?style=social">]
-              </div>
-              <div class="paper_bottom_space"></div>
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">
-              <div class='paper_title'>
-                <a href="https://arxiv.org/abs/2005.04114">SentiBERT: A Transferable Transformer-Based Architecture for Compositional Sentiment Semantics</a>
-              </div>
-              <div class='paper_rest'>
-                <b>Da Yin</b>, Tao Meng, Kai-Wei Chang<br/>
-                <b>ACL 2020</b><br/>
-                [ <a href="https://arxiv.org/abs/2005.04114">paper</a> | <a href="https://github.com/WadeYin9712/SentiBERT">code</a> ]
-              </div>
-              <div class="paper_bottom_space"></div>
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">
-              <div class='paper_title'>
-                <a href="https://www.aclweb.org/anthology/2020.acl-main.469/">What Does BERT with Vision Look At?</a>
-              </div>
-              <div class='paper_rest'>
-                Liunian Harold Li, Mark Yatskar, <b>Da Yin</b>, Cho-Jui Hsieh, Kai-Wei Chang<br/>
-                <b>ACL 2020</b><br/>
-                [ <a href="https://www.aclweb.org/anthology/2020.acl-main.469/">paper</a> | <a href="https://github.com/uclanlp/visualbert">code</a> ]
-              </div>
-              <div class="paper_bottom_space"></div>
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">
-              <div class='paper_title'>
-                <a href="https://arxiv.org/abs/1908.03557">VisualBERT: A Simple and Performant Baseline for Vision and Language</a>
-              </div>
-              <div class='paper_rest'>
-                Liunian Harold Li, Mark Yatskar, <b>Da Yin</b>, Cho-Jui Hsieh, Kai-Wei Chang<br/>
-                <i>Arxiv Preprint</i><br/>
-                [ <a href="https://arxiv.org/abs/1908.03557">paper</a> | <a href="https://github.com/uclanlp/visualbert">code</a> <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/uclanlp/visualbert?style=social">]
-              </div>
-              <div class="paper_bottom_space"></div>
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">
-              <div class='paper_title'>
-                <a href="https://dl.acm.org/doi/10.1145/3357384.3358024">Interactive Multi-Grained Joint Model for Targeted Sentiment Analysis</a>
-              </div>
-              <div class='paper_rest'>
-                <b>Da Yin*</b>, Xiao Liu*, Xiaojun Wan<br/>
-                <i>(Equal Contribution)</i><br/>
-                <b>CIKM 2019</b><br/>
-                [ <a href="https://dl.acm.org/doi/10.1145/3357384.3358024">paper</a> ]
-              </div>
-              <div class="paper_bottom_space"></div>
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">
-              <div class='paper_title'>
-                <a href="https://www.aclweb.org/anthology/W19-1302/">A Soft Label Strategy for Target-Level Sentiment Classification</a>
-              </div>
-              <div class='paper_rest'>
-                <b>Da Yin</b>, Xiao Liu, Xiuyu Wu, Baobao Chang<br/>
-                <b>WASSA workshop @ NAACL 2019 (Computational Approaches to Subjectivity, Sentiment and Social Media Analysis)</b><br/>
-                [ <a href="https://www.aclweb.org/anthology/W19-1302/">paper</a> ]
-              </div>
-              <div class="paper_bottom_space"></div>
-            </td>
-          </tr>
-        </table>
-      </div>
-      <br>
-      <div class='row'>
-        <hr>
-      </div>
-
     </div>
-    <div class='col-xs-1'>
+
+    <div class="paper">
+      <div class="venue">NeurIPS 2024</div>
+      <div class="info">
+        <h3>SafeWorld: Geo‑Diverse Safety Alignment</h3>
+        <p><b>Da Yin*</b>, Haoyi Qiu*, Kung‑Hsiang Huang, Kai‑Wei Chang, Nanyun Peng</p>
+        <h5>
+          (* denotes equal contribution)
+        </h5>
+        <div class="links"><a href="https://arxiv.org/abs/2412.06483">📄 Paper</a><a href="https://github.com/PlusLabNLP/SafeWorld">💻 Code</a></div>
+      </div>
     </div>
-  </div>
 
+    <div class="paper">
+      <div class="venue">ACL 2024</div>
+      <div class="info">
+        <h3>🪄 Agent Lumos: Unified and Modular Training for Open-Source Language Agents</h3>
+        <p><b>Da Yin</b>, Faeze Brahman, Abhilasha Ravichander, Khyathi Chandu, Kai-Wei Chang, Yejin Choi, Bill Yuchen Lin</p>
+        <h4>
+          <font color="#FF0000">Featured by <a href="https://www.marktechpost.com/2024/04/01/lumos-an-open-source-generalizable-language-agent-training-framework">Marktechpost</a></font>
+          <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/allenai/lumos?style=social">
+        </h4>
+        <div class="links"><a href="https://arxiv.org/abs/2311.05657">📄 Paper</a><a href="https://github.com/allenai/lumos">💻 Code</a><a href="https://allenai.github.io/lumos/">
+            🌐 Website</a
+          >
+        </div>
+      </div>
+    </div>
 
+    <div class="paper">
+      <div class="venue">ACL 2024</div>
+      <div class="info">
+        <h3>Trial and Error: Exploration-Based Trajectory Optimization for LLM Agents</h3>
+        <p>Yifan Song, <b>Da Yin</b>, Xiang Yue, Jie Huang, Sujian Li, Bill Yuchen Lin</p>
+        <div class="links"><a href="https://arxiv.org/abs/2403.02502">📄 Paper</a><a href="https://github.com/Yifan-Song793/ETO">💻 Code</a></div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="venue">NeurIPS 2024</div>
+      <div class="info">
+        <h3>Consent in Crisis: The Rapid Decline of the AI Data Commons</h3>
+        <p>Shayne Longpre, Robert Mahari, Ariel Lee, Campbell Lund, Hamidah Oderinwale, William Brannon, Nayan Saxena, Naana Obeng-Marnu, Tobin South, Cole Hunter, Kevin Klyman, Christopher Klamm, Hailey Schoelkopf, Nikhil Singh, Manuel Cherep, Ahmad Anis, An Dinh, Caroline Chitongo, <b>Da Yin</b>, Damien Sileo, Deividas Mataciunas, Diganta Misra, Emad Alghamdi, Enrico Shippole, Jianguo Zhang, Joanna Materzynska, Kun Qian, Kush Tiwary, Lester Miranda, Manan Dey, Minnie Liang, Mohammed Hamdy, Niklas Muennighoff, Seonghyeon Ye, Seungone Kim, Shrestha Mohanty, Vipul Gupta, Vivek Sharma, Vu Minh Chien, Xuhui Zhou, Yizhi Li, Caiming Xiong, Luis Villa, Stella Biderman, Hanlin Li, Daphne Ippolito, Sara Hooker, Jad Kabbara, Sandy Pentland</p>
+        <h4>
+          <font color="#FF0000">Featured by <a href="https://www.nytimes.com/2024/07/19/technology/ai-data-restrictions.html">New York Times</a></font>
+        </h4>
+        <div class="links"><a href="https://arxiv.org/abs/2407.14933">📄 Paper</a><a href="https://github.com/Data-Provenance-Initiative/Data-Provenance-Collection">💻 Code</a><a href="https://www.dataprovenance.org/">
+            🌐 Website</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="venue">ACL 24 Findings</div>
+      <div class="info">
+        <h3>KPEval: Towards Fine-Grained Semantic-Based Keyphrase Evaluation</h3>
+        <p>Di Wu, <b>Da Yin</b>, Kai‑Wei Chang</p>
+        <div class="links"><a href="https://arxiv.org/abs/2303.15422">📄 Paper</a><a href="https://github.com/uclanlp/KPEval">💻 Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="venue">EMNLP 2023</div>
+      <div class="info">
+        <h3>Dynosaur: A Dynamic Growth Paradigm for Instruction-Tuning Data Curation</h3>
+        <p><b>Da Yin*</b>, Xiao Liu*, Fan Yin*, Ming Zhong*, Hritik Bansal, Jiawei Han, Kai‑Wei Chang</p>
+        <h5>
+          (* denotes equal contribution)
+        </h5>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2305.14327">📄 Paper</a><a href="https://github.com/WadeYin9712/Dynosaur">💻 GitHub</a><a href="https://dynosaur-it.github.io/">
+            🌐 Website</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="venue">Pan-DL @ EMNLP</div>
+      <div class="info">
+        <h3>LEAF: Linguistically Enhanced Event Temporal Relation Framework</h3>
+        <p>Stanley Lim, <b>Da Yin</b>, Nanyun Peng</p>
+        <h4>
+          <font color="#FF0000">🏆 Best Paper Award</font>
+        </h4>
+        <div class="links">
+          <a href="https://aclanthology.org/2023.pandl-1.2/">📄 Paper</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="venue">CVPR 2023</div>
+      <div class="info">
+        <h3>GIVL: Improving Geographical Inclusivity of Vision-Language Models with Pre-Training Methods</h3>
+        <p><b>Da Yin</b>, Feng Gao, Govind Thattai, Michael Johnston, Kai‑Wei Chang</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2301.01893">📄 Paper</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="venue">EMNLP 2022</div>
+      <div class="info">
+        <h3>GeoMLAMA: Geo-Diverse Commonsense Probing on Multilingual Pre-Trained Language Models</h3>
+        <p><b>Da Yin</b>, Hritik Bansal, Masoud Monajatipoor, Liunian Harold Li, Kai-Wei Chang</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2205.12247">📄 Paper</a><a href="https://github.com/WadeYin9712/GeoMLAMA/">💻 GitHub</a>
+        </div>
+        <h4>
+          <font color="#FF0000">Oral Presentation</font>
+        </h4>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="venue">EMNLP 2022</div>
+      <div class="info">
+        <h3>How well can Text-to-Image Generative Models understand Ethical Natural Language Interventions?</h3>
+        <p>Hritik Bansal*, <b>Da Yin*</b>, Masoud Monajatipoor, Kai-Wei Chang</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2210.15230">📄 Paper</a><a href="https://github.com/Hritikbansal/entigen_emnlp">💻 GitHub</a>
+        </div>
+        <h4>
+          <font color="#FF0000">Oral Presentation</font>
+        </h4>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="venue">EMNLP 2022</div>
+      <div class="info">
+        <h3>Towards a Unified Multi‑Dimensional Evaluator for Text Generation</h3>
+        <p>Ming Zhong, Yang Liu, <b>Da Yin</b>, Yuning Mao, Yizhu Jiao, Pengfei Liu, Chenguang Zhu, Heng Ji, Jiawei Han</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2210.07197">📄 Paper</a><a href="https://github.com/maszhongming/UniEval">💻 GitHub</a>
+        </div>
+        <h4>
+          <font color="#FF0000">Oral Presentation</font>
+        </h4>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="venue">ACL 2022</div>
+      <div class="info">
+        <h3>Things not Written in Text: Exploring Spatial Commonsense from Visual Signals</h3>
+        <p>Xiao Liu, <b>Da Yin</b>, Yansong Feng, Dongyan Zhao</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2203.08075">📄 Paper</a><a href="https://github.com/xxxiaol/spatial-commonsense">💻 GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="venue">EMNLP 2021</div>
+      <div class="info">
+        <h3>Broaden the Vision: Geo-Diverse Visual Commonsense Reasoning</h3>
+        <p><b>Da Yin</b>, Liunian Harold Li, Ziniu Hu, Nanyun Peng, Kai-Wei Chang</p>
+        <h5>
+          (* denotes equal contribution)
+        </h5>
+        <h4>
+          <font color="#FF0000">Oral Presentation</font>
+        </h4>
+        <div class="links">
+          <a href="https://aclanthology.org/2021.emnlp-main.162/">📄 Paper</a><a href="https://github.com/WadeYin9712/GD-VCR">💻 GitHub</a><a href="https://gd-vcr.github.io/">
+            🌐 Website</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="venue">NAACL 2021</div>
+      <div class="info">
+        <h3>Everything Has a Cause: Leveraging Causal Inference in Legal Text Analysis</h3>
+        <p>Xiao Liu*, <b>Da Yin*</b>, Yansong Feng, Yuting Wu, Dongyan Zhao</p>
+        <h5>
+          (* denotes equal contribution)
+        </h5>
+        <h4>
+          <font color="#FF0000">Oral Presentation</font>
+        </h4>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2203.08075">📄 Paper</a><a href="https://github.com/xxxiaol/GCI/">💻 GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="venue">NAACL 2021</div>
+      <div class="info">
+        <h3>QMSum: A New Benchmark for Query-based Multi-domain Meeting Summarization</h3>
+        <p>Ming Zhong*, <b>Da Yin*</b>, Tao Yu, Ahmad Zaidi, Mutethia Mutuma, Rahul Jha, Ahmed Hassan Awadallah, Asli Celikyilmaz, Yang Liu, Xipeng Qiu, Dragomir Radev</p>
+        <h5>
+          (* denotes equal contribution)
+        </h5>
+        <h4>
+          <font color="#FF0000">Oral Presentation</font>
+        </h4>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2104.05938">📄 Paper</a><a href="https://github.com/Yale-LILY/QMSum">💻 GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="venue">ACL 2020</div>
+      <div class="info">
+        <h3>SentiBERT: A Transferable Transformer-Based Architecture for Compositional Sentiment Semantics</h3>
+        <p><b>Da Yin</b>, Tao Meng, Kai‑Wei Chang</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2005.04114">📄 Paper</a><a href="https://github.com/WadeYin9712/SentiBERT">💻 GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="venue">ACL 2020</div>
+      <div class="info">
+        <h3>What Does BERT with Vision Look At?</h3>
+        <p>a.k.a. VisualBERT: A Simple and Performant Baseline for Vision and Language</p>
+        <p>Liunian Harold Li, Mark Yatskar, <b>Da Yin</b>, Cho-Jui Hsieh, Kai-Wei Chang</p>
+        <h4>
+          <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/uclanlp/visualbert?style=social">
+        </h4>
+        <div class="links">
+          <a href="https://www.aclweb.org/anthology/2020.acl-main.469/">📄 Paper</a><a href="https://github.com/uclanlp/visualbert">💻 GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="venue">CIKM 2019</div>
+      <div class="info">
+        <h3>Interactive Multi-Grained Joint Model for Targeted Sentiment Analysis</h3>
+        <p><b>Da Yin*</b>, Xiao Liu*, Xiaojun Wan</p>
+        <h5>
+          (* denotes equal contribution)
+        </h5>
+        <h4>
+          <font color="#FF0000">Oral Presentation</font>
+        </h4>
+        <div class="links">
+          <a href="https://dl.acm.org/doi/10.1145/3357384.3358024">📄 Paper</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
 </body>
 </html>
-
-<!-- Localized -->
